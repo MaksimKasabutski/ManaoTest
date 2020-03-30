@@ -1,3 +1,6 @@
+<?php 
+if(session_status() != PHP_SESSION_ACTIVE) session_start(); 
+?>
 <!DOCTYPE html>
 <html lang='en'>
     <head>
@@ -6,12 +9,11 @@
         <link rel="stylesheet" href="style.css"> 
     </head>
 <body>
-<div id="response" style="display: none;"></div>
-<noscript>
-Внимание, включите JavaScript!
-</noscript>
+    <div id="response" style="display: none;"></div>
+    <noscript>
+    Внимание, включите JavaScript!
+    </noscript>
     <?php
-    session_start();
     require_once('Security.php');
 
     if ( Security::checkCookie() ) {

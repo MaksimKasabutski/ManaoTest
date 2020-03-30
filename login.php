@@ -1,7 +1,8 @@
 <?php
+    if(session_status() != PHP_SESSION_ACTIVE) session_start();     
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
-    session_start();
+    
 
     require_once('Response.php');
     require_once('UserProvider.php');
